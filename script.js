@@ -24,19 +24,23 @@ document.querySelectorAll('.info').forEach(el=>{
 });
 
 // MC Transformer Winding Calculator
-document.getElementById('calcWinding').addEventListener('click',()=>{
+document.getElementById('calcWinding').addEventListener('click', () => {
   const maxTurns = 240;
+
   let V1 = parseFloat(document.getElementById('vPrimary').value);
   let V2 = parseFloat(document.getElementById('vSecondary').value);
 
-  if(V1 <= 0 || V2 <= 0){
+  if (V1 <= 0 || V2 <= 0 || isNaN(V1) || isNaN(V2)) {
     document.getElementById('windingResult').innerText = "Enter valid voltages!";
     return;
   }
 
-  let N_primary = Math.round((V1/(V1+V2)) * maxTurns);
+  // Correct transformer ratio
+  let ratio = V1 / V2;
+
+  let N_primary = Math.round((ratio / (1 + ratio)) * maxTurns);
   let N_secondary = maxTurns - N_primary;
 
-  document.getElementById('windingResult').innerText = 
+  document.getElementById('windingResult').innerText =
     `Primary Winding: ${N_primary} turns, Secondary Winding: ${N_secondary} turns (Total: ${N_primary + N_secondary})`;
 });
