@@ -18,109 +18,75 @@
   <button class="tab-button" data-tab="info">About</button>
 </div>
 
-<!-- ================= LIGHT TYPES ================= -->
+<!-- ================= LIGHTS ================= -->
 <div class="tab-content active" id="lights">
-
 <table>
 <thead>
-<tr>
-<th>Category</th>
-<th>Type</th>
-<th>Abbreviation</th>
-<th>Details</th>
-</tr>
+<tr><th>Category</th><th>Type</th><th>Abbrev</th><th>Details</th></tr>
 </thead>
 <tbody>
 
-<tr><td>Incandescent</td><td>Incandescent</td><td>INC</td>
-<td><details><summary>View</summary>
-Voltage: 110–240V<br>Watts: 25–100W<br>
-Color: 2700–3000K <span class="color-box" style="background:#FFD9A3;"></span>
-</details></td></tr>
+<tr><td>Incandescent</td><td>Incandescent <span class="info" data-full="Incandescent Lamp">⌕</span></td><td>INC</td>
+<td><details><summary>View</summary>110–240V | 25–100W | 2700–3000K</details></td></tr>
 
-<tr><td>Incandescent</td><td>Halogen</td><td>HAL</td>
-<td><details><summary>View</summary>
-Voltage: 12–120V<br>Watts: 20–500W<br>
-Color: 3000–3500K <span class="color-box" style="background:#FFF2E0;"></span>
-</details></td></tr>
+<tr><td>Incandescent</td><td>Halogen <span class="info" data-full="Halogen Lamp">⌕</span></td><td>HAL</td>
+<td><details><summary>View</summary>12–120V | 20–500W | 3000–3500K</details></td></tr>
 
-<tr><td>HID</td><td>Metal Halide</td><td>MH</td>
-<td><details><summary>View</summary>
-Voltage: 120–480V<br>Watts: 175–1000W<br>
-Color: 4000–6000K <span class="color-box" style="background:#E0E0FF;"></span>
-</details></td></tr>
+<tr><td>HID</td><td>Metal Halide <span class="info" data-full="Metal Halide Lamp">⌕</span></td><td>MH</td>
+<td><details><summary>View</summary>175–1000W | 4000–6000K</details></td></tr>
 
 <tr><td>HID</td><td>Ceramic MH</td><td>CMH</td>
-<td><details><summary>View</summary>
-Watts: 70–315W<br>
-Color: 3000–4200K <span class="color-box" style="background:#FFFFFF;"></span>
-</details></td></tr>
+<td><details><summary>View</summary>70–315W | 3000–4200K</details></td></tr>
 
 <tr><td>HID</td><td>High Pressure Sodium</td><td>HPS</td>
-<td><details><summary>View</summary>
-Watts: 70–1000W<br>
-Color: 2000–2200K <span class="color-box" style="background:#FFD966;"></span>
-</details></td></tr>
+<td><details><summary>View</summary>70–1000W | 2000–2200K</details></td></tr>
 
 <tr><td>Fluorescent</td><td>Fluorescent Tube</td><td>FL</td>
-<td><details><summary>View</summary>
-Watts: 15–80W</details></td></tr>
+<td><details><summary>View</summary>15–80W</details></td></tr>
 
 <tr><td>Fluorescent</td><td>Compact Fluorescent</td><td>CFL</td>
-<td><details><summary>View</summary>
-Watts: 5–30W</details></td></tr>
+<td><details><summary>View</summary>5–30W</details></td></tr>
 
 <tr><td>Fluorescent</td><td>CCFL</td><td>CCFL</td>
-<td><details><summary>View</summary>
-Watts: 3–40W</details></td></tr>
+<td><details><summary>View</summary>3–40W</details></td></tr>
 
 <tr><td>Solid-State</td><td>LED</td><td>LED</td>
-<td><details><summary>View</summary>
-Voltage: 12V / 230V<br>Watts: 1–200W</details></td></tr>
+<td><details><summary>View</summary>1–200W</details></td></tr>
 
 <tr><td>Solid-State</td><td>OLED</td><td>OLED</td>
-<td><details><summary>View</summary>
-Voltage: 5–24V</details></td></tr>
+<td><details><summary>View</summary>5–24V</details></td></tr>
 
-<tr><td>Special</td><td>UV Lamp</td><td>UV</td>
-<td><details><summary>View</summary>
-Watts: 4–100W</details></td></tr>
+<tr><td>Special</td><td>UV</td><td>UV</td>
+<td><details><summary>View</summary>4–100W</details></td></tr>
 
 <tr><td>Special</td><td>Infrared</td><td>IR</td>
-<td><details><summary>View</summary>
-Watts: 10–500W</details></td></tr>
+<td><details><summary>View</summary>10–500W</details></td></tr>
 
 <tr><td>Natural</td><td>Sunlight</td><td>SOL</td>
-<td><details><summary>View</summary>
-5000–6500K</details></td></tr>
+<td><details><summary>View</summary>5000–6500K</details></td></tr>
 
 <tr><td>Natural</td><td>Firelight</td><td>FLAME</td>
-<td><details><summary>View</summary>
-1800–2200K</details></td></tr>
+<td><details><summary>View</summary>1800–2200K</details></td></tr>
 
 </tbody>
 </table>
 </div>
 
-<!-- ================= MCB TAB ================= -->
+<!-- ================= MCB ================= -->
 <div class="tab-content" id="mcbs">
 <table>
-<thead>
-<tr><th>Type</th><th>Rating</th><th>Use</th><th>Details</th></tr>
-</thead>
+<thead><tr><th>Type</th><th>Rating</th><th>Use</th><th>Details</th></tr></thead>
 <tbody>
 
-<tr><td>MCB</td><td>6–63A</td><td>Residential</td>
-<td><details><summary>View</summary>
-230/400V AC<br>Thermal-Magnetic</details></td></tr>
+<tr><td>MCB <span class="info" data-full="Miniature Circuit Breaker">⌕</span></td>
+<td>6–63A</td><td>Residential</td>
+<td><details><summary>View</summary>230/400V AC | Thermal-Magnetic</details></td></tr>
 
 <tr><td>MCBO</td><td>6–125A</td><td>Overload + Short</td>
-<td><details><summary>View</summary>
-Adjustable Trip</details></td></tr>
+<td><details><summary>View</summary>Adjustable Trip</details></td></tr>
 
 <tr><td>Switchgear</td><td>Up to 6300A</td><td>Industrial</td>
-<td><details><summary>View</summary>
-LV/MV/HV systems</details></td></tr>
+<td><details><summary>View</summary>LV/MV/HV Systems</details></td></tr>
 
 </tbody>
 </table>
@@ -143,41 +109,42 @@ LV/MV/HV systems</details></td></tr>
 <p id="windingResult"></p>
 </div>
 
-<!-- ================= SAFETY + EICR ================= -->
+<!-- ================= SAFETY ================= -->
 <div class="tab-content" id="safety">
 
 <h2>Substation Safety</h2>
-<div class="safety-status unsafe" id="substationStatus">NOT SAFE TO WORK</div>
+<div class="safety-status unsafe" id="substationStatus">
+NOT SAFE TO WORK
+</div>
 
 <ul class="checklist" data-group="substation">
+<li><label><input type="checkbox" data-required="true"> PTW <span class="info" data-full="Permit To Work">⌕</span></label></li>
 <li><label><input type="checkbox" data-required="true"> Breaker Isolated</label></li>
 <li><label><input type="checkbox" data-required="true"> Absence of Voltage Confirmed</label></li>
-<li><label><input type="checkbox" data-required="true"> Temporary Earth Applied</label></li>
-<li><label><input type="checkbox" data-required="true"> LOTO Applied</label></li>
+<li><label><input type="checkbox" data-required="true"> LOTO Applied <span class="info" data-full="Lock Out Tag Out">⌕</span></label></li>
 <li><label><input type="checkbox"> Transformer Oil Level OK</label></li>
 <li><label><input type="checkbox"> Protection Relays Tested</label></li>
 </ul>
 
 <hr>
 
-<h2>EICR Checklist</h2>
-<div class="safety-status unsafe" id="eicrStatus">NOT SAFE TO CERTIFY</div>
+<h2>EICR</h2>
+<div class="safety-status unsafe" id="eicrStatus">
+NOT SAFE TO CERTIFY
+</div>
 
 <ul class="checklist" data-group="eicr">
-<li><label><input type="checkbox" data-required="true"> Continuity of CPC</label></li>
-<li><label><input type="checkbox" data-required="true"> Ring Final Continuity</label></li>
-<li><label><input type="checkbox" data-required="true"> Insulation Resistance</label></li>
+<li><label><input type="checkbox" data-required="true"> CPC Continuity <span class="info" data-full="Circuit Protective Conductor">⌕</span></label></li>
+<li><label><input type="checkbox" data-required="true"> Insulation Resistance (IR)</label></li>
 <li><label><input type="checkbox" data-required="true"> Polarity Confirmed</label></li>
-<li><label><input type="checkbox" data-required="true"> Zs Verified</label></li>
-<li><label><input type="checkbox"> RCD Trip Time Verified</label></li>
+<li><label><input type="checkbox" data-required="true"> Zs Verified <span class="info" data-full="Earth Fault Loop Impedance">⌕</span></label></li>
+<li><label><input type="checkbox"> RCD Trip Time</label></li>
 </ul>
 
 </div>
 
-<!-- ================= INFO ================= -->
 <div class="tab-content" id="info">
-<h2>About</h2>
-<p>Electrical reference & safety verification tool.</p>
+<p>Electrical reference & inspection system.</p>
 </div>
 
 <div id="tooltip"></div>
