@@ -145,3 +145,83 @@ pre {
 a {
   color: purple;
 }
+/* ===============================
+   SUBSTATION TAB ENHANCEMENTS
+================================= */
+
+#substation h2 {
+  color: #EEEEEE;
+  margin-bottom: 15px;
+}
+
+#substation details {
+  margin-bottom: 12px;
+  background-color: #222222;
+  border: 1px solid #444444;
+  padding: 8px;
+}
+
+#substation summary {
+  font-size: 0.95em;
+  color: #FFD966;
+}
+
+#substation ul {
+  list-style: none;
+  padding-left: 10px;
+}
+
+#substation li {
+  padding: 4px 0;
+  font-size: 0.9em;
+}
+
+/* Optional: clickable checklist style */
+#substation li:hover {
+  background-color: #333333;
+}
+
+/* ===============================
+   CHECKBOX STYLE (if you upgrade later)
+================================= */
+
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.check-item input[type="checkbox"] {
+  accent-color: #FFD966;
+  cursor: pointer;
+}
+
+/* ===============================
+   REGULATION / REFERENCE BLOCKS
+================================= */
+
+.reference-box {
+  background-color: #1a1a1a;
+  border-left: 3px solid #FFD966;
+  padding: 8px 10px;
+  margin-top: 10px;
+  font-size: 0.85em;
+  color: #bbbbbb;
+}
+
+/* ===============================
+   IMPROVED BUTTON FEEDBACK
+================================= */
+
+.tab-button:hover {
+  background-color: #3a3a3a;
+}
+
+/* ===============================
+   TRANSFORMER OUTPUT EMPHASIS
+================================= */
+
+#windingResult {
+  font-size: 1em;
+  letter-spacing: 0.5px;
+}
