@@ -225,3 +225,28 @@ a {
   font-size: 1em;
   letter-spacing: 0.5px;
 }
+.safety-status {
+  padding:10px;
+  margin-bottom:15px;
+  font-weight:bold;
+  border:1px solid #555;
+}
+
+.safe {
+  background:#1f3b1f;
+  color:#00ff88;
+}
+
+.unsafe {
+  background:#3b1f1f;
+  color:#ff5555;
+}
+
+.checklist {
+  list-style:none;
+  padding-left:10px;
+}
+
+.checklist li {
+  padding:4px 0;
+}
