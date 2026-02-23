@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accurate Interactive Light Types - Mobile Gray Terminal</title>
+<style>
+  body {
+    background-color: #1E1E1E; 
+    color: #CCCCCC; 
+    font-family: "Courier New", Courier, monospace;
+    margin: 0;
+    padding: 20px;
+  }
+  h1 {
+    color: #EEEEEE;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #555555;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+  }
+  th, td {
+    border: 1px solid #555555;
+    padding: 8px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background-color: #2E2E2E;
+    color: #EEEEEE;
+  }
+  tr:nth-child(even) {
+    background-color: #252525;
+  }
+  tr:hover {
+    background-color: #333333;
+  }
+  details {
+    background-color: #252525;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid #555555;
+  }
+  summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #EEEEEE;
+  }
+  pre {
+    background-color: #1E1E1E;
+    color: #CCCCCC;
+    padding: 10px;
+    overflow-x: auto;
+    border-left: 2px solid #555555;
+  }
+  .color-box {
+    display: inline-block;
+    width: 60px;
+    height: 20px;
+    border: 1px solid #555555;
+    margin-left: 5px;
+    vertical-align: middle;
+  }
+  @media (max-width: 600px) {
+    table, th, td {
+      font-size: 0.8em;
+    }
+    pre {
+      font-size: 0.8em;
+    }
+    .color-box {
+      width: 50px;
+      height: 18px;
+    }
+  }
+</style>
+</head>
+<body>
+<h1>💡 Accurate Interactive Light Types</h1>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Type</th>
+<th>Abbreviation</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<!-- Incandescent -->
+<tr>
+<td>Incandescent</td>
+<td>Incandescent</td>
+<td>INC</td>
+<td>
+<details>
+<summary>View Info</summary>
+<p><strong>Use case:</strong> Household lamps, general lighting</p>
+<p><strong>Voltage:</strong> 110–240V AC</p>
+<p><strong>Watts:</strong> 25–100W</p>
+<p><strong>Current:</strong> 0.2–1A</p>
+<p><strong>Color temp:</strong> 2700K–3000K <span class="color-box" style="background-color:#FFD9A3;"></span></p>
+<pre>
+AC Mains
+ ┌───────┐
+ │  INC  │
+ └───────┘
+</pre>
+</details>
+</td>
+</tr>
+
+<tr>
+<td>Incandescent</td>
+<td>Halogen</td>
+<td>HAL</td>
+<td>
+<details>
+<summary>View Info</summary>
+<p><strong>Use case:</strong> Spotlights, floodlights, automotive</p>
+<p><strong>Voltage:</strong> 12–120V AC/DC</p>
+<p><strong>Watts:</strong> 20–500W</p>
+<p><strong>Current:</strong> 0.5–4A</p>
+<p><strong>Color temp:</strong> 3000–3500K <span class="color-box" style="background-color:#FFF2E0;"></span></p>
+<pre>
+AC/DC Mains
+ ┌───────┐
+ │  HAL  │
+ └───────┘
+</pre>
+</details>
+</td>
+</tr>
+
+<!-- HID / Discharge -->
+<tr>
+<td>HID / Discharge</td>
+<td>Metal Halide</td>
+<td>MH</td>
+<td>
+<details>
+<summary>View Info</summary>
+<p><strong>Use case:</strong> Stadiums, warehouses, indoor horticulture</p>
+<p><strong>Voltage:</strong> 120–480V AC (ballast required)</p>
+<p><strong>Watts:</strong> 175–1000W</p>
+<p><strong>Current:</strong> 1–10A</p>
+<p><strong>Color temp:</strong> 4000–6000K <span class="color-box" style="background-color:#E0E0FF;"></span></p>
+<p><strong>Ballast:</strong> Magnetic/electronic, some require ignitor</p>
+<pre>
+AC Mains
+   │
+   ▼
+┌─────────────┐
+│   Ballast   │
+└─────────────┘
+     │
+     ▼
+┌─────────────┐
+│ Metal Halide│
+└─────────────┘
+</pre>
+</details>
+</td>
+</tr>
+
+<tr>
+<td>HID / Discharge</td>
+<td>Ceramic Metal Halide</td>
+<td>CMH / CDM</td>
+<td>
+<details>
+<summary>View Info</summary>
+<p><strong>Use case:</strong> Retail, indoor horticulture, architectural</p>
+<p><strong>Voltage:</strong> 120–480V AC (ballast)</p>
+<p><strong>Watts:</strong> 70–315W</p>
+<p><strong>Current:</strong> 0.6–3A</p>
+<p><strong>Color temp:</strong> 3000–4200K <span class="color-box" style="background-color:#FFFFFF;"></span></p>
+<p><strong>Ballast:</strong> Electronic/ceramic, may need ignitor</p>
+<pre>
+AC Mains
+   │
+   ▼
+┌─────────────┐
+│   Ballast   │
+└─────────────┘
+     │
+     ▼
+┌─────────────┐
+│    CMH      │
+└─────────────┘
+</pre>
+</details>
+</td>
+</tr>
+
+<tr>
+<td>HID / Discharge</td>
+<td>High Pressure Sodium</td>
+<td>HPS</td>
+<td>
+<details>
+<summary>View Info</summary>
+<p><strong>Use case:</strong> Streetlights, industrial outdoor</p>
+<p><strong>Voltage:</strong> 120–480V AC (ballast)</p>
+<p><strong>Watts:</strong> 70–1000W</p>
+<p><strong>Current:</strong> 0.5–8A</p>
+<p><strong>Color temp:</strong> 2000–2200K <span class="color-box" style="background-color:#FFD966;"></span></p>
+<p><strong>Ballast:</strong> Required</p>
+<pre>
+AC Mains
+   │
+   ▼
+┌─────────────┐
+│   Ballast   │
+└─────────────┘
+     │
+     ▼
+┌─────────────┐
+│    HPS      │
+└─────────────┘
+</pre>
+</details>
+</td>
+</tr>
+
+<!-- Fluorescent -->
+<tr>
+<td>Fluorescent</td>
+<td>Fluorescent Tube</td>
+<td>FL</td>
+<td>
+<details>
+<summary>View Info</summary>
+<p><strong>Use case:</strong> Office, classrooms, industrial</p>
+<p><strong>Voltage:</strong> 110–240V AC (via ballast)</p>
+<p><strong>Watts:</strong> 15–80W</p>
+<p><strong>Current:</strong> 0.1–0.8A</p>
+<p><strong>Color temp:</strong> 2700–6500K <span class="color-box" style="background-color:#E6FFE6;"></span></p>
+<p><strong>Ballast:</strong> Magnetic/electronic</p>
+<pre>
+AC Mains
+   │
+   ▼
+┌─────────────┐
+│   Ballast   │
+└─────────────┘
+     │
+     ▼
+┌─────────────┐
+│ Fluorescent │
+└─────────────┘
+</pre>
+</details>
+</td>
+</tr>
+
+<tr>
+<td>Fluorescent</td>
+<td>Compact Fluorescent Lamp</td>
+<td>CFL</td>
+<td>
+<details>
+<summary>View Info</summary>
+<p><strong>Use case:</strong> Household energy-saving</p>
+<p><strong>Voltage:</strong> 110–240V AC</p>
+<p><strong>Watts:</strong> 5–30W</p>
+<p><strong>Current:</strong> 0.05–0.3A</p>
+<p><strong>Color temp:</strong> 2700–6500K <span class="color-box" style="background-color:#FFFACD;"></span></p>
+<p><strong>Ballast:</strong> Internal</p>
+<pre>
+AC Mains
+ ┌───────────┐
+ │   CFL     │
+ └───────────┘
+</pre>
+</details>
+</td>
+</tr>
+
+<tr>
+<td>Fluorescent</td>
+<td>Cold Cathode Fluorescent</td>
+<td>CCFL</td>
+<td>
+<details>
+<summary>View Info</summary>
+<p><strong>Use case:</strong> Backlighting, decorative</p>
+<p><strong>Voltage:</strong> 12–120V AC/DC (via inverter)</p>
+<p><strong>Watts:</strong> 3–40W</p>
+<p><strong>Current:</strong> 0.05–1A</p>
+<p><strong>Color temp:</strong> 3000–7000K <span class="color-box" style="background-color:#CCFFFF;"></span></p>
+<p><strong>Ballast:</strong> Inverter</p>
+<pre>
+AC/DC Mains
+   │
+   ▼
+┌─────────────┐
+│ Inverter    │
+└─────────────┘
+     │
+     ▼
+┌─────────────┐
+│ CCFL Tube   │
+└─────────────┘
+</pre>
+</details>
+</td>
+</tr>
+
+<!-- Solid-State / LED -->
+<tr>
+<td>Solid-State</td>
+<td>LED</td>
+<td>LED</td>
+<td>
+<details>
+<summary>View Info</summary>
+<p><strong>Use case:</strong> Household, displays, automotive, street</p>
+<p><strong>Voltage:</strong> 12V DC / 120–240V AC (driver)</p>
+<p><strong>Watts:</strong> 1–200W</p>
+<p><strong>Current:</strong> 0.1–5A</p>
+<p><strong>Color temp:</strong> 2700–6500K <span class="color-box" style="background-color:#FFFFFF;"></span></p>
+<p><strong>Driver:</strong> Required for AC mains</p>
+<pre>
+AC Mains
+   │
+   ▼
+┌─────────────┐
+│ LED Driver  │
+└─────────────┘
+     │
+     ▼
+┌─────────────┐
+│    LED      │
+└─────────────┘
+</pre>
+</details>
+</td>
+</tr>
+
+<tr>
+<td>Solid-State</td>
+<td>OLED</td>
+<td>OLED</td>
+<td>
+<details>
+<summary>View Info</summary>
+<p><strong>Use case:</strong> Flexible displays, accent lighting</p>
+<p><strong>Voltage:</strong> 5–24V DC</p>
+<p><strong>Watts:</strong> 0.5–50W</p>
+<p><strong>Current:</strong> 0.05–2A</p>
+<p><strong>Color temp:</strong> 2700–6500K <span class="color-box" style="background-color:#FFE6CC;"></span></p>
+<pre>
+DC Mains
+  │
+  ▼
+┌─────────────┐
+│ OLED Panel  │
+└─────────────┘
+</pre>
+</details>
+</td>
+</tr>
+
+<!-- UV / IR -->
+<tr>
+<td>Special</td>
+<td>UV Lamp</td>
+<td>UV</td>
+<td>
+<details>
+<summary>View Info</summary>
+<p><strong>Use case:</strong> Sterilization, blacklight</p>
+<p><strong>Voltage:</strong> 12–240V AC/DC</p>
+<p><strong>Watts:</strong> 4–100W</p>
+<p><strong>Current:</strong> 0.05–1A</p>
+<p><strong>Color:</strong> <span class="color-box" style="background-color:#6600CC;"></span> Ultraviolet</p>
+<pre>
+AC/DC Mains
+ │
+ ▼
+┌─────────────┐
+│ UV Lamp     │
+└─────────────┘
+</pre>
+</details>
+</td>
+</tr>
+
+<tr>
+<td>Special</td>
+<td>Infrared</td>
+<td>IR</td>
+<td>
+<details>
+<summary>View Info</summary>
+<p><strong>Use case:</strong> Heating, sensors, industrial</p>
+<p><strong>Voltage:</strong> 12–240V AC/DC</p>
+<p><strong>Watts:</strong> 10–500W</p>
+<p><strong>Current:</strong> 0.1–4A</p>
+<p><strong>Color:</strong> <span class="color-box" style="background-color:#FF3300;"></span> Infrared / Red</p>
+<pre>
+AC/DC Mains
+ │
+ ▼
+┌─────────────┐
+│ IR Emitter  │
+└─────────────┘
+</pre>
+</details>
+</td>
+</tr>
+
+<!-- Natural / Fire -->
+<tr>
+<td>Natural</td>
+<td>Sunlight</td>
+<td>SOL</td>
+<td>
+<details>
+<summary>View Info</summary>
+<p><strong>Use case:</strong> Outdoor natural illumination</p>
+<p><strong>Voltage / Watts:</strong> N/A</p>
+<p><strong>Color temp:</strong> 5000–6500K <span class="color-box" style="background-color:#FFF9CC;"></span> Daylight</p>
+</details>
+</td>
+</tr>
+
+<tr>
+<td>Natural</td>
+<td>Firelight</td>
+<td>FLAME</td>
+<td>
+<details>
+<summary>View Info</summary>
+<p><strong>Use case:</strong> Ambient / emergency</p>
+<p><strong>Voltage / Watts:</strong> N/A</p>
+<p><strong>Color temp:</strong> 1800–2200K <span class="color-box" style="background-color:#FFCC99;"></span> Warm Orange</p>
+</details>
+</td>
+</tr>
+
+</tbody>
+</table>
+</body>
+</html>
