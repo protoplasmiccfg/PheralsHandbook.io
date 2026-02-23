@@ -14,296 +14,193 @@
   <button class="tab-button active" data-tab="lights">Light Types</button>
   <button class="tab-button" data-tab="mcbs">MCBs / Switchgear</button>
   <button class="tab-button" data-tab="transformer">MC Transformer Calc</button>
+  <button class="tab-button" data-tab="substation">Substation Safety</button>
   <button class="tab-button" data-tab="info">About This!</button>
 </div>
 
-<!-- Light Types Tab -->
+<!-- ================= LIGHT TYPES ================= -->
 <div class="tab-content active" id="lights">
-  <table>
-    <thead>
-      <tr>
-        <th>Category</th>
-        <th>Type</th>
-        <th>Abbreviation</th>
-        <th>Details</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Incandescent</td>
-        <td>Incandescent <span class="info" data-full="Incandescent Lamp (INC)">⌕</span></td>
-        <td>INC</td>
-        <td>
-          <details>
-            <summary>View Info</summary>
-            <p>Use case: Household lamps</p>
-            <p>Voltage: 110–240V AC</p>
-            <p>Watts: 25–100W</p>
-            <p>Current: 0.2–1A</p>
-            <p>Color temp: 2700–3000K <span class="color-box" style="background-color:#FFD9A3;"></span></p>
-          </details>
-        </td>
-      </tr>
-      <tr>
-        <td>Incandescent</td>
-        <td>Halogen <span class="info" data-full="Halogen Lamp (HAL)">⌕</span></td>
-        <td>HAL</td>
-        <td>
-          <details>
-            <summary>View Info</summary>
-            <p>Use case: Spotlights, automotive</p>
-            <p>Voltage: 12–120V AC/DC</p>
-            <p>Watts: 20–500W</p>
-            <p>Color temp: 3000–3500K <span class="color-box" style="background-color:#FFF2E0;"></span></p>
-          </details>
-        </td>
-      </tr>
-      <tr>
-        <td>HID / Discharge</td>
-        <td>Metal Halide <span class="info" data-full="Metal Halide Lamp (MH)">⌕</span></td>
-        <td>MH</td>
-        <td>
-          <details>
-            <summary>View Info</summary>
-            <p>Use case: Stadiums, warehouses</p>
-            <p>Voltage: 120–480V AC</p>
-            <p>Watts: 175–1000W</p>
-            <p>Color temp: 4000–6000K <span class="color-box" style="background-color:#E0E0FF;"></span></p>
-          </details>
-        </td>
-      </tr>
-      <tr>
-        <td>HID / Discharge</td>
-        <td>Ceramic Metal Halide <span class="info" data-full="Ceramic Metal Halide Lamp (CMH/CDM)">⌕</span></td>
-        <td>CMH / CDM</td>
-        <td>
-          <details>
-            <summary>View Info</summary>
-            <p>Use case: Retail, horticulture</p>
-            <p>Voltage: 120–480V AC</p>
-            <p>Watts: 70–315W</p>
-            <p>Color temp: 3000–4200K <span class="color-box" style="background-color:#FFFFFF;"></span></p>
-          </details>
-        </td>
-      </tr>
-      <tr>
-        <td>HID / Discharge</td>
-        <td>High Pressure Sodium <span class="info" data-full="High Pressure Sodium Lamp (HPS)">⌕</span></td>
-        <td>HPS</td>
-        <td>
-          <details>
-            <summary>View Info</summary>
-            <p>Use case: Streetlights</p>
-            <p>Voltage: 120–480V AC</p>
-            <p>Watts: 70–1000W</p>
-            <p>Color temp: 2000–2200K <span class="color-box" style="background-color:#FFD966;"></span></p>
-          </details>
-        </td>
-      </tr>
-      <tr>
-        <td>Fluorescent</td>
-        <td>Fluorescent Tube <span class="info" data-full="Fluorescent Tube (FL)">⌕</span></td>
-        <td>FL</td>
-        <td>
-          <details>
-            <summary>View Info</summary>
-            <p>Use case: Office, classrooms</p>
-            <p>Voltage: 110–240V AC</p>
-            <p>Watts: 15–80W</p>
-          </details>
-        </td>
-      </tr>
-      <tr>
-        <td>Fluorescent</td>
-        <td>Compact Fluorescent Lamp <span class="info" data-full="Compact Fluorescent Lamp (CFL)">⌕</span></td>
-        <td>CFL</td>
-        <td>
-          <details>
-            <summary>View Info</summary>
-            <p>Use case: Household energy-saving</p>
-            <p>Voltage: 110–240V AC</p>
-            <p>Watts: 5–30W</p>
-          </details>
-        </td>
-      </tr>
-      <tr>
-        <td>Fluorescent</td>
-        <td>Cold Cathode Fluorescent <span class="info" data-full="Cold Cathode Fluorescent (CCFL)">⌕</span></td>
-        <td>CCFL</td>
-        <td>
-          <details>
-            <summary>View Info</summary>
-            <p>Use case: Backlighting</p>
-            <p>Voltage: 12–120V AC/DC</p>
-            <p>Watts: 3–40W</p>
-          </details>
-        </td>
-      </tr>
-      <tr>
-        <td>Solid-State</td>
-        <td>LED <span class="info" data-full="Light Emitting Diode (LED)">⌕</span></td>
-        <td>LED</td>
-        <td>
-          <details>
-            <summary>View Info</summary>
-            <p>Use case: Household, street</p>
-            <p>Voltage: 12V DC / 120–240V AC</p>
-            <p>Watts: 1–200W</p>
-          </details>
-        </td>
-      </tr>
-      <tr>
-        <td>Solid-State</td>
-        <td>OLED <span class="info" data-full="Organic Light Emitting Diode (OLED)">⌕</span></td>
-        <td>OLED</td>
-        <td>
-          <details>
-            <summary>View Info</summary>
-            <p>Use case: Flexible displays</p>
-            <p>Voltage: 5–24V DC</p>
-            <p>Watts: 0.5–50W</p>
-          </details>
-        </td>
-      </tr>
-      <tr>
-        <td>Special</td>
-        <td>UV Lamp <span class="info" data-full="Ultraviolet Lamp (UV)">⌕</span></td>
-        <td>UV</td>
-        <td>
-          <details>
-            <summary>View Info</summary>
-            <p>Use case: Sterilization</p>
-            <p>Voltage: 12–240V AC/DC</p>
-            <p>Watts: 4–100W</p>
-          </details>
-        </td>
-      </tr>
-      <tr>
-        <td>Special</td>
-        <td>Infrared <span class="info" data-full="Infrared Lamp (IR)">⌕</span></td>
-        <td>IR</td>
-        <td>
-          <details>
-            <summary>View Info</summary>
-            <p>Use case: Heating</p>
-            <p>Voltage: 12–240V AC/DC</p>
-            <p>Watts: 10–500W</p>
-          </details>
-        </td>
-      </tr>
-      <tr>
-        <td>Natural</td>
-        <td>Sunlight <span class="info" data-full="Natural Sunlight (SOL)">⌕</span></td>
-        <td>SOL</td>
-        <td>
-          <details>
-            <summary>View Info</summary>
-            <p>Use case: Outdoor illumination</p>
-            <p>Color temp: 5000–6500K</p>
-          </details>
-        </td>
-      </tr>
-      <tr>
-        <td>Natural</td>
-        <td>Firelight <span class="info" data-full="Firelight / Flame (FLAME)">⌕</span></td>
-        <td>FLAME</td>
-        <td>
-          <details>
-            <summary>View Info</summary>
-            <p>Use case: Ambient / emergency</p>
-            <p>Color temp: 1800–2200K</p>
-          </details>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Type</th>
+<th>Abbreviation</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>Incandescent</td>
+<td>Incandescent <span class="info" data-full="Incandescent Lamp (INC)">⌕</span></td>
+<td>INC</td>
+<td>
+<details>
+<summary>View Info</summary>
+<p>Voltage: 110–240V AC</p>
+<p>Watts: 25–100W</p>
+<p>Color temp: 2700–3000K <span class="color-box" style="background:#FFD9A3;"></span></p>
+</details>
+</td>
+</tr>
+
+<tr>
+<td>HID</td>
+<td>Metal Halide <span class="info" data-full="Metal Halide (MH)">⌕</span></td>
+<td>MH</td>
+<td>
+<details>
+<summary>View Info</summary>
+<p>Voltage: 120–480V AC</p>
+<p>Watts: 175–1000W</p>
+<p>Color temp: 4000–6000K <span class="color-box" style="background:#E0E0FF;"></span></p>
+</details>
+</td>
+</tr>
+
+<tr>
+<td>Solid-State</td>
+<td>LED <span class="info" data-full="Light Emitting Diode (LED)">⌕</span></td>
+<td>LED</td>
+<td>
+<details>
+<summary>View Info</summary>
+<p>Voltage: 12V DC / 120–240V AC</p>
+<p>Watts: 1–200W</p>
+</details>
+</td>
+</tr>
+
+</tbody>
+</table>
 </div>
 
-<!-- MCBs / Switchgear Tab -->
+<!-- ================= MCB TAB ================= -->
 <div class="tab-content" id="mcbs">
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Rating</th>
-        <th>Use Case</th>
-        <th>Details</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>MCB <span class="info" data-full="Miniature Circuit Breaker (MCB)">⌕</span></td>
-        <td>6–63A</td>
-        <td>Residential / Commercial</td>
-        <td>
-          <details>
-            <summary>View Info</summary>
-            <p>Voltage: 230/400V AC</p>
-            <p>Poles: 1P, 2P, 3P, 4P</p>
-            <p>Tripping: Thermal-magnetic</p>
-          </details>
-        </td>
-      </tr>
-      <tr>
-        <td>MCBO <span class="info" data-full="MCB with Overload (MCBO)">⌕</span></td>
-        <td>6–125A</td>
-        <td>Overload + Short-circuit</td>
-        <td>
-          <details>
-            <summary>View Info</summary>
-            <p>Voltage: 230/400V AC</p>
-            <p>Poles: 1P–4P</p>
-            <p>Tripping: Adjustable thermal-magnetic</p>
-          </details>
-        </td>
-      </tr>
-      <tr>
-        <td>Switchgear <span class="info" data-full="Industrial Switchgear">⌕</span></td>
-        <td>Up to 6300A</td>
-        <td>Industrial / Distribution</td>
-        <td>
-          <details>
-            <summary>View Info</summary>
-            <p>Voltage: LV/MV/HV</p>
-            <p>Components: MCB, MCCB, isolators, relays</p>
-          </details>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Rating</th>
+<th>Use Case</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>MCB <span class="info" data-full="Miniature Circuit Breaker">⌕</span></td>
+<td>6–63A</td>
+<td>Residential</td>
+<td>
+<details>
+<summary>View Info</summary>
+<p>Voltage: 230/400V AC</p>
+<p>Poles: 1P–4P</p>
+<p>Thermal-magnetic trip</p>
+</details>
+</td>
+</tr>
+
+<tr>
+<td>Switchgear</td>
+<td>Up to 6300A</td>
+<td>Industrial Distribution</td>
+<td>
+<details>
+<summary>View Info</summary>
+<p>LV / MV / HV</p>
+<p>Includes MCCB, relays, isolators</p>
+</details>
+</td>
+</tr>
+
+</tbody>
+</table>
 </div>
 
+<!-- ================= TRANSFORMER ================= -->
 <div class="tab-content" id="transformer">
-  <h2>MC Transformer Winding Calculator</h2>
-  <p>Total maximum windings per transformer: 240</p>
-  <label>Enter Primary Voltage (V₁): <input type="number" id="vPrimary" value="230"></label>
-  <label>Enter Secondary Voltage (V₂): <input type="number" id="vSecondary" value="400"></label>
-  <button id="calcWinding">Calculate Windings</button>
-  <p id="windingResult"></p>
+<h2>MC Transformer Winding Calculator</h2>
+<p>Total maximum windings per transformer: 240</p>
+
+<label>Primary Voltage (V₁):
+<input type="number" id="vPrimary" value="230">
+</label>
+
+<label>Secondary Voltage (V₂):
+<input type="number" id="vSecondary" value="400">
+</label>
+
+<button id="calcWinding">Calculate</button>
+<p id="windingResult"></p>
 </div>
 
+<!-- ================= SUBSTATION ================= -->
+<div class="tab-content" id="substation">
+
+<h2>Substation Maintenance Safety</h2>
+
+<details open>
+<summary><strong>General Work Authorization</strong></summary>
+<ul>
+<li>✔ Permit to Work issued</li>
+<li>✔ Switching schedule approved</li>
+<li>✔ Toolbox talk completed</li>
+<li>✔ Emergency plan reviewed</li>
+</ul>
+</details>
+
+<details>
+<summary><strong>Isolation & LOTO</strong></summary>
+<ul>
+<li>✔ Breaker isolated</li>
+<li>✔ Absence of voltage confirmed</li>
+<li>✔ Temporary grounding applied</li>
+<li>✔ Lock & tag applied</li>
+</ul>
+</details>
+
+<details>
+<summary><strong>Transformer Inspection</strong></summary>
+<ul>
+<li>✔ Oil level normal</li>
+<li>✔ No leaks</li>
+<li>✔ Breather condition good</li>
+<li>✔ Temperature normal</li>
+</ul>
+</details>
+
+<details>
+<summary><strong>HV Switchgear</strong></summary>
+<ul>
+<li>✔ Contacts inspected</li>
+<li>✔ SF6 pressure normal</li>
+<li>✔ Protection relays tested</li>
+</ul>
+</details>
+
+<details>
+<summary><strong>PPE Requirements</strong></summary>
+<ul>
+<li>✔ Arc-rated clothing</li>
+<li>✔ Insulated gloves</li>
+<li>✔ Face shield</li>
+<li>✔ Dielectric boots</li>
+</ul>
+</details>
+
+</div>
+
+<!-- ================= INFO ================= -->
 <div class="tab-content" id="info">
-<h1>Why did i put this together?</h1>
-<p>Its pretty simple just a personal guide to refresh my mind!</p>
-<ln></ln>
-<h1>Whats being added?</h1>
-<p>Eventually Info on create:powergrid parts and protective switchgear and regulations and a general refresh</p>
-<ln></ln>
-<h1>Why didnt you make this site yourself?</h1>
-<p>I was tired and this was made at like 3am i couldnt be asked to spend hours tryna make someyhing quick!</p>
-<ln></ln>
-<h1>What about your mod?</h1>
-<p>My expansion *yet to be named will introduce More lights, MCBs MCBOs and much more smaller electrical installation related equipment to create:powergrid</p>
-<ln></ln>
-<h1>Do you have a community?</h1>
-<p>Of course!, but we dont do discord servers we use Stoat(formaly revolt) as a discord alternitive cuz its just better... <a href="https://stt.gg/6BHS0jyd">Join here</a> </p>
-<footer><small style="color:red">Please note this site was AI Assisted my other sites <u>Are Not!</u> Made by pheralWayz & ChatGPT-5o</small></footer>
+<h2>About This</h2>
+<p>Personal refresh reference for electrical systems.</p>
 </div>
 
 <div id="tooltip"></div>
 
-
 <script src="script.js"></script>
-
 </body>
 </html>
