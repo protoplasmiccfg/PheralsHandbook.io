@@ -14,12 +14,13 @@
   <button class="tab-button active" data-tab="lights">Light Types</button>
   <button class="tab-button" data-tab="mcbs">MCBs / Switchgear</button>
   <button class="tab-button" data-tab="transformer">MC Transformer Calc</button>
-  <button class="tab-button" data-tab="substation">Substation Safety</button>
-  <button class="tab-button" data-tab="info">About This!</button>
+  <button class="tab-button" data-tab="safety">Safety & EICR</button>
+  <button class="tab-button" data-tab="info">About</button>
 </div>
 
 <!-- ================= LIGHT TYPES ================= -->
 <div class="tab-content active" id="lights">
+
 <table>
 <thead>
 <tr>
@@ -31,46 +32,71 @@
 </thead>
 <tbody>
 
-<tr>
-<td>Incandescent</td>
-<td>Incandescent <span class="info" data-full="Incandescent Lamp (INC)">⌕</span></td>
-<td>INC</td>
-<td>
-<details>
-<summary>View Info</summary>
-<p>Voltage: 110–240V AC</p>
-<p>Watts: 25–100W</p>
-<p>Color temp: 2700–3000K <span class="color-box" style="background:#FFD9A3;"></span></p>
-</details>
-</td>
-</tr>
+<tr><td>Incandescent</td><td>Incandescent</td><td>INC</td>
+<td><details><summary>View</summary>
+Voltage: 110–240V<br>Watts: 25–100W<br>
+Color: 2700–3000K <span class="color-box" style="background:#FFD9A3;"></span>
+</details></td></tr>
 
-<tr>
-<td>HID</td>
-<td>Metal Halide <span class="info" data-full="Metal Halide (MH)">⌕</span></td>
-<td>MH</td>
-<td>
-<details>
-<summary>View Info</summary>
-<p>Voltage: 120–480V AC</p>
-<p>Watts: 175–1000W</p>
-<p>Color temp: 4000–6000K <span class="color-box" style="background:#E0E0FF;"></span></p>
-</details>
-</td>
-</tr>
+<tr><td>Incandescent</td><td>Halogen</td><td>HAL</td>
+<td><details><summary>View</summary>
+Voltage: 12–120V<br>Watts: 20–500W<br>
+Color: 3000–3500K <span class="color-box" style="background:#FFF2E0;"></span>
+</details></td></tr>
 
-<tr>
-<td>Solid-State</td>
-<td>LED <span class="info" data-full="Light Emitting Diode (LED)">⌕</span></td>
-<td>LED</td>
-<td>
-<details>
-<summary>View Info</summary>
-<p>Voltage: 12V DC / 120–240V AC</p>
-<p>Watts: 1–200W</p>
-</details>
-</td>
-</tr>
+<tr><td>HID</td><td>Metal Halide</td><td>MH</td>
+<td><details><summary>View</summary>
+Voltage: 120–480V<br>Watts: 175–1000W<br>
+Color: 4000–6000K <span class="color-box" style="background:#E0E0FF;"></span>
+</details></td></tr>
+
+<tr><td>HID</td><td>Ceramic MH</td><td>CMH</td>
+<td><details><summary>View</summary>
+Watts: 70–315W<br>
+Color: 3000–4200K <span class="color-box" style="background:#FFFFFF;"></span>
+</details></td></tr>
+
+<tr><td>HID</td><td>High Pressure Sodium</td><td>HPS</td>
+<td><details><summary>View</summary>
+Watts: 70–1000W<br>
+Color: 2000–2200K <span class="color-box" style="background:#FFD966;"></span>
+</details></td></tr>
+
+<tr><td>Fluorescent</td><td>Fluorescent Tube</td><td>FL</td>
+<td><details><summary>View</summary>
+Watts: 15–80W</details></td></tr>
+
+<tr><td>Fluorescent</td><td>Compact Fluorescent</td><td>CFL</td>
+<td><details><summary>View</summary>
+Watts: 5–30W</details></td></tr>
+
+<tr><td>Fluorescent</td><td>CCFL</td><td>CCFL</td>
+<td><details><summary>View</summary>
+Watts: 3–40W</details></td></tr>
+
+<tr><td>Solid-State</td><td>LED</td><td>LED</td>
+<td><details><summary>View</summary>
+Voltage: 12V / 230V<br>Watts: 1–200W</details></td></tr>
+
+<tr><td>Solid-State</td><td>OLED</td><td>OLED</td>
+<td><details><summary>View</summary>
+Voltage: 5–24V</details></td></tr>
+
+<tr><td>Special</td><td>UV Lamp</td><td>UV</td>
+<td><details><summary>View</summary>
+Watts: 4–100W</details></td></tr>
+
+<tr><td>Special</td><td>Infrared</td><td>IR</td>
+<td><details><summary>View</summary>
+Watts: 10–500W</details></td></tr>
+
+<tr><td>Natural</td><td>Sunlight</td><td>SOL</td>
+<td><details><summary>View</summary>
+5000–6500K</details></td></tr>
+
+<tr><td>Natural</td><td>Firelight</td><td>FLAME</td>
+<td><details><summary>View</summary>
+1800–2200K</details></td></tr>
 
 </tbody>
 </table>
@@ -80,41 +106,21 @@
 <div class="tab-content" id="mcbs">
 <table>
 <thead>
-<tr>
-<th>Type</th>
-<th>Rating</th>
-<th>Use Case</th>
-<th>Details</th>
-</tr>
+<tr><th>Type</th><th>Rating</th><th>Use</th><th>Details</th></tr>
 </thead>
 <tbody>
 
-<tr>
-<td>MCB <span class="info" data-full="Miniature Circuit Breaker">⌕</span></td>
-<td>6–63A</td>
-<td>Residential</td>
-<td>
-<details>
-<summary>View Info</summary>
-<p>Voltage: 230/400V AC</p>
-<p>Poles: 1P–4P</p>
-<p>Thermal-magnetic trip</p>
-</details>
-</td>
-</tr>
+<tr><td>MCB</td><td>6–63A</td><td>Residential</td>
+<td><details><summary>View</summary>
+230/400V AC<br>Thermal-Magnetic</details></td></tr>
 
-<tr>
-<td>Switchgear</td>
-<td>Up to 6300A</td>
-<td>Industrial Distribution</td>
-<td>
-<details>
-<summary>View Info</summary>
-<p>LV / MV / HV</p>
-<p>Includes MCCB, relays, isolators</p>
-</details>
-</td>
-</tr>
+<tr><td>MCBO</td><td>6–125A</td><td>Overload + Short</td>
+<td><details><summary>View</summary>
+Adjustable Trip</details></td></tr>
+
+<tr><td>Switchgear</td><td>Up to 6300A</td><td>Industrial</td>
+<td><details><summary>View</summary>
+LV/MV/HV systems</details></td></tr>
 
 </tbody>
 </table>
@@ -123,13 +129,13 @@
 <!-- ================= TRANSFORMER ================= -->
 <div class="tab-content" id="transformer">
 <h2>MC Transformer Winding Calculator</h2>
-<p>Total maximum windings per transformer: 240</p>
+<p>Total Max Turns: 240</p>
 
-<label>Primary Voltage (V₁):
+<label>Primary Voltage:
 <input type="number" id="vPrimary" value="230">
 </label>
 
-<label>Secondary Voltage (V₂):
+<label>Secondary Voltage:
 <input type="number" id="vSecondary" value="400">
 </label>
 
@@ -137,66 +143,41 @@
 <p id="windingResult"></p>
 </div>
 
-<!-- ================= SUBSTATION ================= -->
-<div class="tab-content" id="substation">
+<!-- ================= SAFETY + EICR ================= -->
+<div class="tab-content" id="safety">
 
-<h2>Substation Maintenance Safety</h2>
+<h2>Substation Safety</h2>
+<div class="safety-status unsafe" id="substationStatus">NOT SAFE TO WORK</div>
 
-<details open>
-<summary><strong>General Work Authorization</strong></summary>
-<ul>
-<li>✔ Permit to Work issued</li>
-<li>✔ Switching schedule approved</li>
-<li>✔ Toolbox talk completed</li>
-<li>✔ Emergency plan reviewed</li>
+<ul class="checklist" data-group="substation">
+<li><label><input type="checkbox" data-required="true"> Breaker Isolated</label></li>
+<li><label><input type="checkbox" data-required="true"> Absence of Voltage Confirmed</label></li>
+<li><label><input type="checkbox" data-required="true"> Temporary Earth Applied</label></li>
+<li><label><input type="checkbox" data-required="true"> LOTO Applied</label></li>
+<li><label><input type="checkbox"> Transformer Oil Level OK</label></li>
+<li><label><input type="checkbox"> Protection Relays Tested</label></li>
 </ul>
-</details>
 
-<details>
-<summary><strong>Isolation & LOTO</strong></summary>
-<ul>
-<li>✔ Breaker isolated</li>
-<li>✔ Absence of voltage confirmed</li>
-<li>✔ Temporary grounding applied</li>
-<li>✔ Lock & tag applied</li>
-</ul>
-</details>
+<hr>
 
-<details>
-<summary><strong>Transformer Inspection</strong></summary>
-<ul>
-<li>✔ Oil level normal</li>
-<li>✔ No leaks</li>
-<li>✔ Breather condition good</li>
-<li>✔ Temperature normal</li>
-</ul>
-</details>
+<h2>EICR Checklist</h2>
+<div class="safety-status unsafe" id="eicrStatus">NOT SAFE TO CERTIFY</div>
 
-<details>
-<summary><strong>HV Switchgear</strong></summary>
-<ul>
-<li>✔ Contacts inspected</li>
-<li>✔ SF6 pressure normal</li>
-<li>✔ Protection relays tested</li>
+<ul class="checklist" data-group="eicr">
+<li><label><input type="checkbox" data-required="true"> Continuity of CPC</label></li>
+<li><label><input type="checkbox" data-required="true"> Ring Final Continuity</label></li>
+<li><label><input type="checkbox" data-required="true"> Insulation Resistance</label></li>
+<li><label><input type="checkbox" data-required="true"> Polarity Confirmed</label></li>
+<li><label><input type="checkbox" data-required="true"> Zs Verified</label></li>
+<li><label><input type="checkbox"> RCD Trip Time Verified</label></li>
 </ul>
-</details>
-
-<details>
-<summary><strong>PPE Requirements</strong></summary>
-<ul>
-<li>✔ Arc-rated clothing</li>
-<li>✔ Insulated gloves</li>
-<li>✔ Face shield</li>
-<li>✔ Dielectric boots</li>
-</ul>
-</details>
 
 </div>
 
 <!-- ================= INFO ================= -->
 <div class="tab-content" id="info">
-<h2>About This</h2>
-<p>Personal refresh reference for electrical systems.</p>
+<h2>About</h2>
+<p>Electrical reference & safety verification tool.</p>
 </div>
 
 <div id="tooltip"></div>
